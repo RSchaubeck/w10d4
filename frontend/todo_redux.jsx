@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("YO");
 
     const store = configureStore();
-    window.allTodos = allTodos();
     window.store = store;
+    window.allTodos = allTodos(store.getState());
     window.receiveTodo = receiveTodo;
     window.receiveTodos = receiveTodos;
     const root = document.getElementById("content");
